@@ -10,18 +10,8 @@ mus <- seq(from = 0.1, to = 1.0, by = 0.15)
 ## Simulate a yule phylogeny
 set.seed(12345)
 trsYule <- geiger::sim.bdtree(b = 0.2, d = 0, stop = 'taxa', n = 100)
+
 ## Simulate local assemblages under know rates of colonization and local extinction
-
-out = DAMOCLES_sim(trsYule, gamma_0 = 1, gamma_td = 0, mu = 0, sigma = 0, psiBranch = 0, 
-                   psiTrait = 0, z = 10, phi = 0, traitOpt = 1, br0 = 0.1, br_td = -0.1,
-                   nTdim = 2, root.state = 1, root.trait.state = 0, plotit = FALSE,
-                   keepExtinct = FALSE)
-#show presence/absence on the tree
-patable = out[[1]]
-patable$col = rep("black", dim(patable)[1])
-patable$col[which(patable$state == 1)] = "red"
-plot(phy, tip.col = patable$col)
-
 
 sim0.1 <- list()
 sim0.25 <- list()
@@ -129,12 +119,6 @@ for(i in 1:length(PAs0.1)){
 save.image("DamoclesSimulations")
 
 ## Extract results
-x <- DAMOCLES_bootstrap(phy = trsYule, pa = PAs0.85[[i]], initparsopt = c(0.01, 1.8), 
-                        idparsopt = c(1, 2), pars2 = c(1E-3, 1E-4, 1E-5, 10000), 
-                        pchoice = 1, runs = 10, estimate_pars = TRUE,
-                        conf.int = 0.75)[[1]]
-y <- x[2:3,]
-
 load("DamoclesSimulations")
 
 out0.1par <- list()
@@ -156,8 +140,6 @@ for(i in 1:length(out0.1)){
 }
 ## Make final tables
 library(tidyr)
-df1 <- separate(data = y, col = value, into = c("obs", "inter"), sep = "\\(")
-df1$obs
 
 tab0.1 <- list()
 tab0.25 <- list()
@@ -194,22 +176,3 @@ head(tablesParameters)
 
 write.csv(tablesParameters, "tableDAMOCLESsimulation.csv")
 
-##### Plot the results from Pigot and Etienne #####
-
-datos <- read.csv("Estimates_Gamma_Mu_PigotEtienne.csv")
-head(datos)
-boxplot(Mu ~ Gamma, data = datos)
-boxplot(Gamma ~ Mu, data = datos)
-
-Mu0 <- datos[which(datos$Mu == 0), ] 
-Mu0.05 <- datos[which(datos$Mu == 0.05), ]           
-Mu0.5 <- datos[which(datos$Mu == 0.5), ]  
-Mu1 <- datos[which(datos$Mu == 1), ]
-
-Ga0 <- datos[which(datos$Gamma == 0.01), ] 
-Ga0.05 <- datos[which(datos$Gamma == 0.05), ]           
-Ga0.5 <- datos[which(datos$Gamma == 0.5), ]  
-Ga1 <- datos[which(datos$Gamma == 1), ]
-
-cor.test(Ga1$Gamma_estimated, Mu1$Mu_estimated)
-plot(Ga1$Gamma_estimated, Mu1$Mu_estimated)
