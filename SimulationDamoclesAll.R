@@ -87,31 +87,31 @@ for(i in 1:length(PAs0.1)){
   svMisc::progress(i, max.value = length(PAs0.1))
   out0.1[[i]] = DAMOCLES_bootstrap(phy = trsYule, pa = PAs0.1[[i]], initparsopt = c(0.01, 1.8), 
                            idparsopt = c(1, 2), pars2 = c(1E-3, 1E-4, 1E-5, 10000), 
-                           pchoice = 1, runs = 10, estimate_pars = TRUE,
+                           pchoice = 1, runs = 100, estimate_pars = TRUE,
                            conf.int = 0.95)[[1]]
   out0.25[[i]] = DAMOCLES_bootstrap(phy = trsYule, pa = PAs0.25[[i]], initparsopt = c(0.01, 1.8), 
                                   idparsopt = c(1, 2), pars2 = c(1E-3, 1E-4, 1E-5, 10000), 
-                                  pchoice = 1, runs = 10, estimate_pars = TRUE,
+                                  pchoice = 1, runs = 100, estimate_pars = TRUE,
                                   conf.int = 0.95)[[1]]
   out0.4[[i]] = DAMOCLES_bootstrap(phy = trsYule, pa = PAs0.4[[i]], initparsopt = c(0.01, 1.8), 
                                   idparsopt = c(1, 2), pars2 = c(1E-3, 1E-4, 1E-5, 10000), 
-                                  pchoice = 1, runs = 10, estimate_pars = TRUE,
+                                  pchoice = 1, runs = 100, estimate_pars = TRUE,
                                   conf.int = 0.95)[[1]]
   out0.55[[i]] = DAMOCLES_bootstrap(phy = trsYule, pa = PAs0.55[[i]], initparsopt = c(0.01, 1.8), 
                                   idparsopt = c(1, 2), pars2 = c(1E-3, 1E-4, 1E-5, 10000), 
-                                  pchoice = 1, runs = 10, estimate_pars = TRUE,
+                                  pchoice = 1, runs = 100, estimate_pars = TRUE,
                                   conf.int = 0.95)[[1]]
   out0.7[[i]] = DAMOCLES_bootstrap(phy = trsYule, pa = PAs0.7[[i]], initparsopt = c(0.01, 1.8), 
                                   idparsopt = c(1, 2), pars2 = c(1E-3, 1E-4, 1E-5, 10000), 
-                                  pchoice = 1, runs = 10, estimate_pars = TRUE,
+                                  pchoice = 1, runs = 100, estimate_pars = TRUE,
                                   conf.int = 0.95)[[1]]
   out0.85[[i]] = DAMOCLES_bootstrap(phy = trsYule, pa = PAs0.85[[i]], initparsopt = c(0.01, 1.8), 
                                   idparsopt = c(1, 2), pars2 = c(1E-3, 1E-4, 1E-5, 10000), 
-                                  pchoice = 1, runs = 10, estimate_pars = TRUE,
+                                  pchoice = 1, runs = 100, estimate_pars = TRUE,
                                   conf.int = 0.95)[[1]]
   out1.0[[i]] = DAMOCLES_bootstrap(phy = trsYule, pa = PAs1.0[[i]], initparsopt = c(0.01, 1.8), 
                                   idparsopt = c(1, 2), pars2 = c(1E-3, 1E-4, 1E-5, 10000), 
-                                  pchoice = 1, runs = 10, estimate_pars = TRUE,
+                                  pchoice = 1, runs = 100, estimate_pars = TRUE,
                                   conf.int = 0.95)[[1]]
 }
 
