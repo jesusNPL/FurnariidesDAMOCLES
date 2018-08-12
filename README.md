@@ -6,4 +6,6 @@ The repository includes the R functions to run DAMOCLES model over multiple asse
 
 "DemonDAMOCLES" is a R function to run DAMOCLES model (r package DAMOCLES; Pigot & Etienne 2015 Ecology Letters 18, 153-163) for multiple local assemblages in parallel.
 
+If you want to replicate our results, please download the Furnariides phylogeny and the assemblage data set from the Dryad repository: https://doi.org/10.5061/dryad.h3390h5
+
 Note: Damocles model is very time-consuming.
