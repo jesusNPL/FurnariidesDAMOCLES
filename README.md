@@ -12,6 +12,9 @@ Note: Damocles model is very time-consuming.
 # References
 Pigot, A.L. and R.S. Etienne (2015) A new dynamic null model for phylogenetic community structure. Ecology Letters 18, 153-163.
 
-Pinto-Ledezma, J.N., A.E. Jahn, V.R. Cueto, J.A.F. Diniz-Filho and F. Villalobos (2018) Drivers of phylogenetic assemblage structure of the Furnariides, a widespread clade of lowland Neotropical birds. The American Naturalist, 193(2): E41-E56.
+Pinto-Ledezma, J.N., A.E. Jahn, V.R. Cueto, J.A.F. Diniz-Filho and F. Villalobos (2019) Drivers of phylogenetic assemblage structure of the Furnariides, a widespread clade of lowland Neotropical birds. The American Naturalist, 193(2): E41-E56. https://www.journals.uchicago.edu/doi/abs/10.1086/700696 
+
+A correction can be found in:
+Pinto-Ledezma, J.N., A.E. Jahn, V.R. Cueto, J.A.F. Diniz-Filho and F. Villalobos (2019) Correction. The American Naturalist 193(6): 897. https://www.journals.uchicago.edu/doi/abs/10.1086/703185 
 
 Pinto-Ledezma, J.N., A.E. Jahn, V.R. Cueto, J.A.F. Diniz-Filho and F. Villalobos (2018) Drivers of phylogenetic assemblage structure of the Furnariides, a widespread clade of lowland Neotropical birds. The American Naturalist, Dryad Digital Repository, https://datadryad.org/resource/doi:10.5061/dryad.h3390h5
