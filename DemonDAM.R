@@ -41,7 +41,7 @@ DemonDAMOCLES <- function(tree, comm, initparsopt, idparsopt, parsfix, idparsfix
 }
 }
 
-# Run Damocles model using the matched information
+# Run Damocles model using matched information
 BootsDAMAll <- DemonDAMOCLES(tree = matched2[[1]], comm = matched2[[2]], initparsopt = c(0.05, 0.05), 
                   parsfix = c(0), idparsfix = c(3),
                   idparsopt = c(1, 2), pars2 = c(1E-3, 1E-4, 1E-5, 10000), pchoice = 0,
