@@ -8,7 +8,7 @@ matched2 <- match.phylo.comm(phy = DuskyTree, comm = comm_sp)
 
 comNAMES <- as.character(comm_sp$site)
 
-# Just trying with one single community
+# Just trying with a single community
 tr <- matched2$phy
 coms <- t(matched2$comm)
 com1 <- as.matrix(cbind(matrix(rownames(coms)), matrix(coms[, 10])))
